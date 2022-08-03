@@ -1,18 +1,19 @@
-const pwd = require("./pwd.js")
+const pwd = require('./pwd.js');
+const ls = require('./ls.js');
+const cat = require('./cat.js');
 
-const ls = require('./ls.js')
+process.stdout.write('prompt > ');
 
-process.stdout.write('prompt > ')
+process.stdin.on('data', data => {
+    const cmd = data.toString().trim();
 
-process.stdin.on('data', (data) => {
-    const cmd = data.toString().trim()
-    
-    if (cmd == 'ls'){
-     ls()
-    } 
-    if (cmd == 'pwd') { 
-    pwd()
+    if (cmd == 'ls') {
+        ls();
     }
-    // process.stdout.write('\nprompt > ')
-})
-
+    if (cmd == 'pwd') {
+        pwd();
+    }
+    if (cmd.slice(0, 3) == 'cat') {
+        cat(cmd.slice(4));
+    }
+});
