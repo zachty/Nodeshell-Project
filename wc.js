@@ -21,8 +21,9 @@ module.exports = function (file, option, callback) {
         //word count
         if (option === '-w') {
             let arr = data.toString().split(' ');
-            // callback(`${arr.length}`);
-            callback(data.toString().split(' ').join(','));
+            callback(`${arr.length}`);
+            //use this to see how it counts white space as words
+            // callback(data.toString().split(' ').join(','));
         }
     });
 };
