@@ -44,7 +44,7 @@ process.stdin.on('data', data => {
         sort(cmd[1], done);
     }
     if (cmd[0] === 'wc') {
-        wc(cmd[1], done);
+        wc(cmd[2], cmd[1], done);
     }
     if (cmd[0] === 'uniq') {
         uniq(cmd[1], done);
