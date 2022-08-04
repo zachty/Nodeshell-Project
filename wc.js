@@ -23,6 +23,7 @@ module.exports = function (file, option, callback) {
             let arr = data.toString().split(' ');
             callback(`${arr.length}`);
             //use this to see how it counts white space as words
+            //it is also can parse the end of one line and the start of next
             // callback(data.toString().split(' ').join(','));
         }
     });
