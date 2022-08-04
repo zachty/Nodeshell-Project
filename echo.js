@@ -1,3 +1,3 @@
-module.exports = function (callback, arg) {
-    callback(/*TODO*/);
+module.exports = function (arg, callback) {
+    callback(arg);
 };
