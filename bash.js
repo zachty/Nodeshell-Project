@@ -2,6 +2,14 @@ const pwd = require('./pwd.js');
 const ls = require('./ls.js');
 const cat = require('./cat.js');
 const curl = require('./curl.js');
+const date = require('./date.js');
+const echo = require('./echo.js');
+const head = require('./head.js');
+const tail = require('./tail.js');
+const sort = require('./sort.js');
+const wc = require('./wc.js');
+const uniq = require('./uniq.js');
+const find = require('./find.js');
 
 process.stdout.write('prompt > ');
 
@@ -21,7 +29,7 @@ process.stdin.on('data', data => {
         curl(cmd[1], done);
     }
     if (cmd[0] === 'date') {
-        date(cmd[1], done);
+        date(done);
     }
     if (cmd[0] === 'echo') {
         echo(cmd[1], done);
