@@ -1,0 +1,22 @@
+{
+  "name": "nodeshell-project",
+  "version": "1.0.0",
+  "description": "making shell",
+  "main": "bash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachty/Nodeshell-Project.git"
+  },
+  "author": "Zach Byerley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachty/Nodeshell-Project/issues"
+  },
+  "homepage": "https://github.com/zachty/Nodeshell-Project#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
